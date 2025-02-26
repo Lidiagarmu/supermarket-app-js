@@ -1,4 +1,18 @@
-body { padding: 20px; }
+body { 
+  
+    background-image: url('/resources/fondo.jpg');
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    height: 100vh; /* Asegura que el fondo cubra toda la ventana del navegador */
+    font-family: Arial, sans-serif; /* Opcional: establecemos una fuente global */
+    padding-top: 60px; /* Añade un espacio desde la parte superior */
+
+}
+
+
 .carrito-icon { font-size: 24px; cursor: pointer; position: relative; }
 .producto-card:hover { transform: scale(1.05); transition: 0.3s; }
 .modal-header, .modal-footer { justify-content: center; }
@@ -50,4 +64,59 @@ body { padding: 20px; }
 h2{
     text-align: center
 ;
+}
+
+.logo {
+    position: absolute;
+    top: 10px; /* Ajusta la distancia desde la parte superior */
+    left: 10px; /* Ajusta la distancia desde la izquierda */
+    width: 300px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto; /* Mantiene la proporción del logo */
+}
+
+
+.nav-link{
+    color: white !important; 
+    
+}
+
+.nav-link:hover {
+    color: #f8f9fa !important; /* Puedes cambiar a otro color si quieres que sea diferente al pasar el cursor */
+}
+
+.carrito-icon {
+    color: white !important; /* Cambia el color del icono a blanco */
+}
+
+
+/* Aumentar tamaño de las pestañas y mejorar contraste */
+.nav-pills .nav-link {
+    font-size: 18px; /* Aumentar el tamaño de la fuente de las pestañas */
+    padding: 12px 20px; /* Añadir más espacio en el interior de las pestañas */
+    border-radius: 30px; /* Redondear las pestañas */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro para un buen contraste con el naranja */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para hover */
+}
+
+/* Pestaña activa con un color más brillante */
+.nav-pills .nav-link.active {
+    background-color: #f8f9fa; /* Fondo claro para la pestaña activa */
+    color: #ff5733 !important; /* Color para el texto en la pestaña activa, un naranja más claro */
+}
+
+/* Efecto hover para las pestañas */
+.nav-pills .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo más claro cuando se pasa el cursor */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Aumentar tamaño y mejorar contraste del icono del carrito */
+.carrito-icon {
+    font-size: 28px; /* Aumentar el tamaño del icono */
+    color: white !important; /* Aseguramos que el icono sea blanco para contraste */
+}
+
+/* Añadir un borde o efecto de resplandor alrededor del icono */
+.carrito-icon:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Resplandor blanco alrededor del icono */
 }
