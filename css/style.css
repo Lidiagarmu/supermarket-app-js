@@ -1,0 +1,53 @@
+body { padding: 20px; }
+.carrito-icon { font-size: 24px; cursor: pointer; position: relative; }
+.producto-card:hover { transform: scale(1.05); transition: 0.3s; }
+.modal-header, .modal-footer { justify-content: center; }
+
+
+/* Ajuste de tamaño de las imágenes dentro de las cartas */
+.card-img-top {
+    width: 100%; 
+    height: 80px; /* Tamaño fijo */
+    object-fit: contain; /* Se ajusta dentro sin recortarse */
+    border-radius: 10px;
+    background-color: #ffffff; 
+    padding: 2px; /* Pequeño margen interior para evitar que toquen los bordes */
+}
+
+/* Tamaño de las tarjetas y disposición para que entren en la pantalla */
+.card {
+    width: 90%;  /* Para que ocupe todo el ancho de su contenedor */
+    height: 250px; /* Ajustamos la altura de la tarjeta */
+}
+
+.col-md-4 {
+    flex: 1 1 30%; /* Las tarjetas ocupan el 30% del ancho en pantallas medianas */
+    max-width: 33.33%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en filas */
+    gap: 10px; /* Espaciado entre las tarjetas */
+}
+
+/* Responsividad para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 45%; /* 2 tarjetas por fila en pantallas medianas */
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-md-4 {
+        flex: 1 1 100%; /* 1 tarjeta por fila en pantallas pequeñas */
+        max-width: 100%;
+    }
+}
+
+
+h2{
+    text-align: center
+;
+}
