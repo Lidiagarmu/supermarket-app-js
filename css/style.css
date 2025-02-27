@@ -12,6 +12,12 @@ body {
 
 }
 
+/* Ajuste general para que todo fluya bien */
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
 
 .carrito-icon { font-size: 24px; cursor: pointer; position: relative; }
 .producto-card:hover { transform: scale(1.05); transition: 0.3s; }
@@ -35,9 +41,9 @@ body {
 }
 
 .col-md-4 {
-    flex: 1 1 30%; /* Las tarjetas ocupan el 30% del ancho en pantallas medianas */
-    max-width: 33.33%;
-}
+    flex: 1 1 30%;
+    max-width: 30%;
+}*/
 
 .row {
     display: flex;
@@ -45,20 +51,6 @@ body {
     gap: 10px; /* Espaciado entre las tarjetas */
 }
 
-/* Responsividad para dispositivos más pequeños */
-@media (max-width: 768px) {
-    .col-md-4 {
-        flex: 1 1 45%; /* 2 tarjetas por fila en pantallas medianas */
-        max-width: 50%;
-    }
-}
-
-@media (max-width: 480px) {
-    .col-md-4 {
-        flex: 1 1 100%; /* 1 tarjeta por fila en pantallas pequeñas */
-        max-width: 100%;
-    }
-}
 
 
 h2{
@@ -66,15 +58,26 @@ h2{
 ;
 }
 
-.logo {
-    position: absolute;
-    top: 10px; /* Ajusta la distancia desde la parte superior */
-    left: 10px; /* Ajusta la distancia desde la izquierda */
-    width: 300px; /* Ajusta el tamaño del logo según sea necesario */
-    height: auto; /* Mantiene la proporción del logo */
+
+
+/* -------- LOGO -------- */
+
+    .logo {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        max-width: 120px; /* Ajusta el tamaño según necesites */
+        height: auto;
+        z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    }
+
+    @media (max-width: 480px) {
+        .logo {
+            max-width: 80px;
+        }
+
+
 }
-
-
 .nav-link{
     color: white !important; 
     
@@ -110,6 +113,14 @@ h2{
     transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
 }
 
+/* -------- NAVEGACIÓN -------- */
+.nav-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 /* Aumentar tamaño y mejorar contraste del icono del carrito */
 .carrito-icon {
     font-size: 28px; /* Aumentar el tamaño del icono */
@@ -119,4 +130,30 @@ h2{
 /* Añadir un borde o efecto de resplandor alrededor del icono */
 .carrito-icon:hover {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Resplandor blanco alrededor del icono */
+}
+
+
+
+/* Ajuste en móviles */
+@media (max-width: 480px) {
+    .col-md-4 {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }}
+
+    /* Ajuste en tablets */
+@media (max-width: 768px) {
+    .col-md-4 {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+    
+
+/* -------- PRODUCTOS (GRID RESPONSIVE) -------- */
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
